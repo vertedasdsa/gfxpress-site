@@ -19,6 +19,10 @@
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);
     font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  /* only the form fields accept typing; the rest of the page is a normal (non-editable) cursor */
+  body{cursor:default;-webkit-user-select:none;user-select:none}
+  input,textarea,select{cursor:auto;-webkit-user-select:text;user-select:text}
+  a,button,.btn,.qsubmit,.submit,.toggle label,.consent,input[type=checkbox],input[type=radio]{cursor:pointer}
   .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
   h1,h2,h3{color:var(--ink);font-weight:800;line-height:1.1;text-wrap:balance;margin:0}
   h2{font-size:clamp(1.5rem,3.2vw,2.1rem);letter-spacing:-.01em}
